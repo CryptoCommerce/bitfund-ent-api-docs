@@ -11,6 +11,9 @@ info:
     url: http://www.apache.org/licenses/LICENSE-2.0.html
   version: 1.0.0
 servers:
+# Added by API Auto Mocking Plugin
+- description: SwaggerHub API Auto Mocking
+  url: https://virtserver.swaggerhub.com/BitFund/bitfund-enterprise-api/1.0.0
 - url: https://virtserver.swaggerhub.com/BitFund/bitfund-private-api/1.0.0
   description: SwaggerHub API Auto Mocking
 tags:
@@ -290,6 +293,9 @@ components:
         label:
           type: string
           description: E.g. Persons name / brokerages unique identifier / software providers unique identifier
+        deposits_bank_reference:
+          type: string
+          description: Description to be used on all FIAT payments when funding this account. Only available once account is in verified status
       description: An entity representing a client of institution such as a bank or brokerage. Usually a person
     Balance:
       type: object
